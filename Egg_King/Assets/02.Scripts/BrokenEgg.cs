@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BrokenEgg : MonoBehaviour
 {
-
     private void OnEnable()
     {
         MainSceneManager.Instance.CrackedEggCount++;
@@ -14,5 +13,4 @@ public class BrokenEgg : MonoBehaviour
     {
         MainSceneManager.Instance.CrackedEggCount--;
     }
-
 }
