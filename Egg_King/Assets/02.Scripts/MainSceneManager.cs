@@ -77,6 +77,8 @@ public class MainSceneManager : MonoBehaviour
 
         Sequence seq = DOTween.Sequence();
 
+        zoneMakeEgg.interactable = false;
+
         mainPanelOfCvsEggCrack.anchoredPosition = new Vector2(0, 0);
         mainPanelOfCvsEggMachine.anchoredPosition = new Vector2(0, -1920);
 
@@ -85,6 +87,7 @@ public class MainSceneManager : MonoBehaviour
 
         eggCounter.gameObject.SetActive(false);
         crackedEggPool.gameObject.SetActive(false);
+        eggPool.gameObject.SetActive(false);
         isChangingUI = true;
 
         seq.Append(mainPanelOfCvsEggCrack.DOAnchorPosY(1920, changeTime).SetEase(Ease.Linear));
@@ -117,6 +120,8 @@ public class MainSceneManager : MonoBehaviour
             mainPanelOfCvsEggMachine.gameObject.SetActive(false);
             uiState = UIState.EggCrack;
             isChangingUI = false;
+            zoneMakeEgg.interactable = true;
+            eggPool.gameObject.SetActive(true);
         });
 
     }
