@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Data
+public class RecipeData : MonoBehaviour
 {
-    int crackedEggLimit = 30;
-    int eggMachineLimit = 30;
+    
 }
